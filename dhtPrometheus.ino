@@ -60,6 +60,7 @@ void setup() {
   Serial.println("Initializing WiFi");
   Serial.printf("Connectong to \"%s\"\n", SSID);
   WiFi.mode(WIFI_STA);
+  WiFi.hostname("DHT-ESP");
   WiFi.begin(SSID, PASSWORD);
   Serial.println("");
   while (WiFi.status() != WL_CONNECTED) {
